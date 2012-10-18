@@ -6,14 +6,14 @@ settings = {
 <% node["lsyncd"]["sync"].each do |sync| -%>
 sync {
   default.<%= sync["mode"] || "rsync" %>,
-  <%= "rsyncOpts={ #{sync["rsyncOpts"].join(",")} }," if sync["rsyncOpts"] %>
-  <%= "exclude={ #{sync["exclude"].join(",")} }," if sync["exclude"] %>
-  <%= "excludeFrom=\"#{sync["excludeFrom"]}\"," if sync["excludeFrom"] %>
+  <%= "rsyncOpts={ #{sync["rsyncOpts"].join(",")} }," if sync["rsyncOpts"] -%>
+  <%= "exclude={ #{sync["exclude"].join(",")} }," if sync["exclude"] -%>
+  <%= "excludeFrom=\"#{sync["excludeFrom"]}\"," if sync["excludeFrom"] -%>
   source="<%= sync["source"] %>",
   <% if sync["target"] -%>
   target="<%= sync["target"] %>"
   <% else -%>
-  <%= "host=\"#{sync["host"]}\"," if sync["host"] %>
+  <%= "host=\"#{sync["host"]}\"," if sync["host"] -%>
   targetdir="<%= sync["targetdir"] %>"
   <% end -%>
 }
