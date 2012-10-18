@@ -46,21 +46,21 @@ Installs/configures lsyncd.
 Select a mode for the sync for further attributes.
 
 Attributes for all modes:
-* "mode" - "rsync" or "rsyncssh" - defaults to "rsync"
-* "source" - _required_ - path to source directory - no default
-* "exclude" - array of file exclusion strings - no default
-* "excludeFrom" - path to exclude file - no default
+* `mode` - "rsync" or "rsyncssh" - defaults to "rsync"
+* `source` - _required_ - path to source directory - no default
+* `exclude` - array of file exclusion strings - no default
+* `excludeFrom` - path to exclude file - no default
 
 #### rsync mode
 
 For remote targets, normal rsync behavior of rsync all changes over the wire.
 
 Attributes:
-* "host" - remote host, used in conjunction with "targetdir" - no default
-* "rsyncOpts" - array of rsync option strings, lsyncd defaults this to "-lts"
-* "target" - full specification ([host::]/target/dir) for destination - no
+* `host` - remote host, used in conjunction with `targetdir` - no default
+* `rsyncOpts` - array of rsync option strings, lsyncd defaults this to "-lts"
+* `target` - full specification for destination ([host::]/target/dir) - no
   default
-* "targetdir" - target directory, possibly used in conjunction with "host" -
+* `targetdir` - target directory, possibly used in conjunction with `host` -
   no default
 
 Example:
@@ -79,9 +79,9 @@ Causes moves and copies to be executed on the remote host via SSH, rather than
 retransmitting files over the wire. Normal rsync behavior otherwise.
 
 Attributes:
-* "host" - remote host - no default
-* "rsyncOpts" - array of rsync option strings, lsyncd defaults this to "-lts"
-* "targetdir" - target directory - no default
+* `host` - _required_ - remote host - no default
+* `rsyncOpts` - array of rsync option strings, lsyncd defaults this to "-lts"
+* `targetdir` - _required_ - target directory - no default
 
 Example:
 
