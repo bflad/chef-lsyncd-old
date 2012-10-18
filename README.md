@@ -2,7 +2,7 @@
 
 ## Description
 
-Installs/configures lsyncd.
+Installs/configures [lsyncd](https://github.com/axkibe/lsyncd).
 
 ## Requirements
 
