@@ -1,0 +1,26 @@
+settings = {
+  logfile = "<%= node["lsyncd"]["logfile"] %>",
+  statusFile = "<%= node["lsyncd"]["statusFile"] %>",
+  statusInterval = <%= node["lsyncd"]["statusInterval"] %>
+}
+<% node["lsyncd"]["sync"].each do |sync| -%>
+sync = {
+  default.<%= sync["mode"] %>,
+  <% if sync["rsyncOpts"] -%>
+  rsyncOpts={<%= sync["rsyncOpts"].join(",") %>},
+  <% end -%>
+  <% if sync["exclude"] -%>
+  exclude={<%= sync["exclude"].join(",") %>},
+  <% end -%>
+  <% if sync["excludeFrom"] -%>
+  excludeFrom="<%= sync["excludeFrom"] %>",
+  <% end -%>
+  source="<%= sync["source"] %>",
+  <% if sync["target"] -%>
+  target=""
+  <% else -%>
+  host="<%= sync["host"] %>",
+  targetdir="<%= sync["targetdir"] %>"
+  <% end -%>
+}
+<% end -%>

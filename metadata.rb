@@ -1,15 +1,15 @@
-maintainer        "The Wharton School - The University of Pennsylvania"
-maintainer_email  "chef-admins@wharton.upenn.edu"
+maintainer        "Brian Flad"
+maintainer_email  "bflad@wharton.upenn.edu"
 license           "Apache 2.0"
-description       "A cool description."
-version           "0.1.0"
-recipe            "template-cookbook", "Short description of template-cookbook default recipe."
-recipe            "template-cookbook::alternate", "Short description of template-cookbook::alternate recipe."
+description       "Installs/configures lsyncd."
+version           "0.0.1"
+recipe            "lsyncd", "Installs/configures lsyncd."
+recipe            "lsyncd::source", "Installs lsyncd from source."
 
-%w{ apache2 logrotate }.each do |d|
+%w{ yum }.each do |d|
   depends d
 end
 
-%w{ redhat ubuntu }.each do |os|
+%w{ amazon centos redhat scientific }.each do |os|
   supports os
 end
