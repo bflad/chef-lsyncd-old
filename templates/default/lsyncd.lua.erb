@@ -19,7 +19,9 @@ sync {
   <% if sync["target"] -%>
   target="<%= sync["target"] %>"
   <% else -%>
+  <% if sync["host"] -%>
   host="<%= sync["host"] %>",
+  <% end -%>
   targetdir="<%= sync["targetdir"] %>"
   <% end -%>
 }
