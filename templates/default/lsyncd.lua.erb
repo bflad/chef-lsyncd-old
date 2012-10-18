@@ -5,7 +5,7 @@ settings = {
 }
 <% node["lsyncd"]["sync"].each do |sync| -%>
 sync = {
-  default.<%= sync["mode"] %>,
+  default.<%= sync["mode"] || "rsync" %>,
   <% if sync["rsyncOpts"] -%>
   rsyncOpts={<%= sync["rsyncOpts"].join(",") %>},
   <% end -%>
