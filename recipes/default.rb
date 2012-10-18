@@ -32,8 +32,8 @@ end
 
 template "/etc/lsyncd.lua" do
   source "lsyncd.lua.erb"
-  owner  root
-  group  root
+  owner  "root"
+  group  "root"
   mode   "0644"
   notifies :restart, resources(:service => "lsyncd"), :delayed
 end
