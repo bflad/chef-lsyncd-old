@@ -29,7 +29,6 @@ service 'lsyncd' do
   action :enable
 end
 
-
 template '/etc/lsyncd.lua' do
   source 'lsyncd.lua.erb'
   owner  'root'
