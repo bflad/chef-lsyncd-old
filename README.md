@@ -94,20 +94,19 @@ Example:
       }
     ]
 
-## License and Author
-      
-Author:: Brian Flad (<bflad@wharton.upenn.edu>)
+## Testing and Development
 
-Copyright:: 2012
+* Quickly testing with Vagrant: [VAGRANT.md](VAGRANT.md)
+* Full development and testing workflow with Test Kitchen and friends: [TESTING.md](TESTING.md)
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+## Contributing
 
-    http://www.apache.org/licenses/LICENSE-2.0
+Please see contributing information in: [CONTRIBUTING.md](CONTRIBUTING.md)
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+## Maintainers
+
+* Brian Flad (<bflad417@gmail.com>)
+
+## License
+
+Please see licensing information in: [LICENSE](LICENSE)
