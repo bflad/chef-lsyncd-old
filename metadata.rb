@@ -7,10 +7,6 @@ version           '0.1.1'
 recipe            'lsyncd', 'Installs/configures lsyncd.'
 recipe            'lsyncd::source', 'Installs lsyncd from source.'
 
-%w{ yum }.each do |d|
-  depends d
-end
-
 %w{ amazon centos redhat scientific }.each do |os|
   supports os
 end

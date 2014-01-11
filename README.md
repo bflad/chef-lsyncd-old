@@ -8,11 +8,8 @@ Installs/configures [lsyncd](https://github.com/axkibe/lsyncd).
 
 ### Platforms
 
-* RedHat 6.3 (Santiago)
-
-### Cookbooks
-
-* yum
+* CentOS 6
+* RHEL 6
 
 ## Attributes
 
