@@ -1,5 +1,9 @@
 # chef-lsyncd [![Build Status](https://secure.travis-ci.org/bflad/chef-lsyncd.png?branch=master)](http://travis-ci.org/bflad/chef-lsyncd)
 
+## COMMUNITY OWNERSHIP MOVED
+
+I've transfered the [lysncd community cookbook](http://community.opscode.com/cookbooks/lsyncd) maintainership to [@dgivens](https://github.com/dgivens/) ([danielgivens](http://community.opscode.com/users/danielgivens) on the community site). Please see: https://github.com/dgivens/chef-lsyncd for a much better cookbook!
+
 ## Description
 
 Installs/configures [lsyncd](https://github.com/axkibe/lsyncd).
